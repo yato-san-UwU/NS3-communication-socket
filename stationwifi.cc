@@ -15,6 +15,17 @@
 #include "ns3/netanim-module.h"
 #include "ns3/animation-interface.h"
 
+//    n10  n11  n12
+//     |    |    |____  
+//     10.1.1.0 wifi   |
+//                     |  10.1.2.0 p2p
+//                     |                
+//                     |                p2p 10.1.4.0
+//   10.1.6.0 |-n1 n2 n3 n4----------------------n5 n6 n7 n8
+//      p2p   | |  |  |  |                        |  |  |  | 
+//            |---------- 10.1.3.0 csma          wifi 10.1.5.0
+//            |n9
+
 using namespace ns3;
 
 NS_LOG_COMPONENT_DEFINE ("stationwifi");
